@@ -40,6 +40,7 @@ function Cta({
   const [randomIndex, setRandomIndex] = useState(null);
   const [randomItem, setRandomItem] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  // const [randomIndex, setRandomIndex] = useState(null);
 
   useEffect(() => {
     const newIndex = Math.floor(Math.random() * newDiscover.length);
