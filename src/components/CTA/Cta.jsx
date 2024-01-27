@@ -31,11 +31,11 @@ function MovieCard({ movie }) {
 
 function Cta({
   newDiscover,
-  // popularMovies,
-  // topRatedMovies,
-  // upcomingMovies,
-  // discoverMovies,
-  // discoverTV
+  popularMovies,
+  topRatedMovies,
+  upcomingMovies,
+  discoverMovies,
+  discoverTV
 }) {
   const [randomIndex, setRandomIndex] = useState(null);
   const [randomItem, setRandomItem] = useState(null);
