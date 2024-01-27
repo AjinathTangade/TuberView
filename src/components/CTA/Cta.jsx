@@ -143,6 +143,7 @@ function Cta({
 
                               <div>
                                 <h3 className="text-white font-semibold">Overview</h3>
+                                <h1>sdASDGasdgAGSD</h1>
                                 <p className="text-md text-gray-200">
                                   {/* {randomItem.overview?randomItem.overview:"Millions of movies, TV shows and people to discover. Explore now"} */}
                                   {truncateText(randomItem.overview, 50) ? truncateText(randomItem.overview, 15) : "Millions of movies, TV shows and people to discover. Explore now"}
@@ -154,9 +155,10 @@ function Cta({
                           </div>
 
                         </div>
+                        
                       </div>
                     ) : (
-                      <p>Loading...</p>
+                      <p>Loading.......</p>
                     )}
                   </div>
                 </div>
