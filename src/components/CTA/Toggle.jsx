@@ -12,7 +12,6 @@ function Toggle({ newDiscover, trendingMovies }) {
         backgroundPosition: 'bottom',
         width: '100%',
         backgroundRepeat: 'no-repeat',
-        // transform: 'rotate(45deg)',
       };
     function MovieCard({ movie }) {
         console.log(movie)
