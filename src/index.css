@@ -9,17 +9,17 @@ body {
 
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-    background-color: #F5F5F5;
+    /* background-color: #f0fffc; */
     border-radius: 10px;
 }
 
 ::-webkit-scrollbar {
     height: 7px;
-    background-color: #F5F5F5;
+    background-color: #f3fffc;
 
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #838383;
+    background-color: #2dd6b0;
     border-radius: 10px;
 }

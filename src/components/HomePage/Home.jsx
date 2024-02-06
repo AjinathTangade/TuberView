@@ -11,11 +11,12 @@ const Home = ({
   discoverMovies,
   discoverTV,
   moviesCategories,
+  trendingMovies,
 }) => {
   return (
     <div className="">
       <NavBar />
-      <div className="mx-auto max-w-7xl px-4 my-8">
+      <div className="mx-auto px-6 my-8 relative top-20">
         <div className="flex gap-10">
           <div className="hidden md:block w-5/12">
             <Sidebar moviesCategories={moviesCategories} />
@@ -29,6 +30,7 @@ const Home = ({
               upcomingMovies={upcomingMovies}
               discoverMovies={discoverMovies}
               discoverTV={discoverTV}
+              trendingMovies={trendingMovies}
             />
           </div>
         </div>

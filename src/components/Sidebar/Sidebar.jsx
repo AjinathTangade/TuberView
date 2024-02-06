@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 function Sidebar({ moviesCategories }) {
 
   return (
-    <div className="hidden md:block w-48">
-      <div className="grid grid-cols-1 ">
+    <div className="hidden md:block w-48 relative">
+      <div className="grid grid-cols-1 fixed">
         <h3 className="text-xl font-bold mb-3">MENU</h3>
         <div>
           {moviesCategories.map((category) => (
