@@ -9,7 +9,8 @@ import {
   faBookmark,
   faList,
 } from "@fortawesome/free-solid-svg-icons";
-import Toggle from "./Toggle";
+import Toggle from "../DiscoverMovies/DiscoverMovies";
+import TopRatedMovies from "../TopRatedMovies/TopRatedMovies";
 
 function truncateText(text, maxLength) {
   if (!text) return "";
@@ -47,7 +48,7 @@ function Cta({
   //console.log(randomItem);
 
   function MovieCard({ movie }) {
-    console.log(movie)
+    //console.log(movie)
     return (
 
       <div className="">
@@ -67,16 +68,16 @@ function Cta({
             </span>
           </div>
           <div className="p-4">
-          <div className="">
-            <h2 className="mt-2 text-sm">{movie.title}</h2>
+            <div className="">
+              <h2 className="mt-2 text-sm">{movie.title}</h2>
+            </div>
+            <div>
+              <span className="">
+                {movie.release_date}
+              </span>
+            </div>
           </div>
-          <div>
-            <span className="">
-              {movie.release_date}
-            </span>
-          </div>
-          </div>
-          
+
         </div>
 
       </div>
@@ -90,8 +91,6 @@ function Cta({
     backgroundRepeat: 'no-repeat',
     // transform: 'rotate(45deg)',
   };
-
-
   return (
     <div className="w-full">
       <div className="grid grid-cols-1">
@@ -241,16 +240,31 @@ function Cta({
           </div>
         </div>
         <div className="my-10">
-          <div id="discover" style={backgroundStyle}>
-            <h2 className="text-3xl font-bold mb-8">Discover</h2>
+          <Toggle
+            trendingMovies={trendingMovies}
+            newDiscover={newDiscover}
+          />
+        </div>
+        <div className="mb-10">
+          <TopRatedMovies
+          topRatedMovies={topRatedMovies}
+          upcomingMovies={upcomingMovies}
+          />
+        </div>
+        <div className="mb-10" style={backgroundStyle}>
+            <h2 className="text-3xl font-bold mb-8">Discover TV</h2>
             <div className="overflow-x-auto">
-              <div className="flex gap-5">
-                {newDiscover.map((movie) => (
+              <div className="flex gap-5 mb-6">
+                {discoverTV.slice(0, 20).map((movie) => (
                   <MovieCard key={movie.id} movie={movie} />
                 ))}
               </div>
             </div>
           </div>
+
+
+        {/* <div className="">
+         
           <div className="mt-10" style={backgroundStyle}>
             <h2 className="text-3xl font-bold mb-8">Top Rated Movies</h2>
             <div className="overflow-x-auto">
@@ -301,12 +315,9 @@ function Cta({
               </div>
             </div>
           </div>
-<Toggle 
-trendingMovies={trendingMovies}
-newDiscover={newDiscover}
-/>
 
-        </div>
+
+        </div> */}
       </div>
     </div>
   );
