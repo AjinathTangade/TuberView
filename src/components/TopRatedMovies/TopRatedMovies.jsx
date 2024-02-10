@@ -17,7 +17,7 @@ function TopRatedMovies({ topRatedMovies, upcomingMovies }) {
     // transform: 'rotate(45deg)',
   };
   function MovieCard({ movie }) {
-    //console.log(movie)
+    console.log(movie)
     return (
 
       <div className="">
